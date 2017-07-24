@@ -7,6 +7,9 @@ defmodule Backend.Web.PageController do
     render conn, "index.html"
   end
 
+  @doc """
+  Charge endpoint.
+  """
   def charge(conn, %{"card" => card, 
                      "amount" => amount, 
                      "intermediaries" => intermediaries}) do
@@ -19,6 +22,7 @@ defmodule Backend.Web.PageController do
     json conn, result
   end
 
+  # Business model function. In Phoenix 1.3, this should go into the payments context.
   defp my_business_model_function(parsed_card, amount, parsed_intermediaries) do
     %{card_id: Card.card_id(parsed_card), 
       amount: amount,

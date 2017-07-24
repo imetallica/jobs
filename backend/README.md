@@ -1,3 +1,10 @@
+# Resolução Teste Back-end
+
+1. Para rodar a app, instale Erlang e Elixir.
+2. Faça `mix deps.get` e depois `mix compile`.
+3. Rode os testes com `mix test`. Deve estar tudo OK. :)
+4. Profit! 
+
 # Teste Back-end
 Nesse teste é preciso fazer uma API REST (JSON), com um endpoint para criar transação:
 

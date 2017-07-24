@@ -1,7 +1,5 @@
 defmodule Backend.Web.PageControllerTest do
   use Backend.Web.ConnCase
-  import Backend.Web.PageController
-  doctest Backend.Web.PageController
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
