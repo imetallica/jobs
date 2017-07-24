@@ -17,12 +17,12 @@ defmodule Backend.Web.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-
-    post "/charge", PageController, :charge
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Backend.Web do
-  #   pipe_through :api
-  # end
+  scope "/", Backend.Web do
+    pipe_through :api
+
+    post "/charge", PageController, :charge
+  end
 end
